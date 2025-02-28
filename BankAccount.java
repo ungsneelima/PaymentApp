@@ -5,11 +5,11 @@ public class BankAccount {
     private String acctNumber;
     private String ifscCode;
     //	private String acctStatus;
-    private BankAccountStatusEnum acctStatus; // Using Enum
+    private BankAccountStatusEnum acctStatus;
     private String bankName;
     private String branch;
 
-    private User user; // Bi-directional relation
+    private User user; 
 
     public long getBankAcctId() {
         return bankAcctId;
