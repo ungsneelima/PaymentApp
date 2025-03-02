@@ -1,4 +1,4 @@
-package com.sat.tmf.pmt.entity;
+package pmt;
 
 public class BankAccount {
     private long bankAcctId;
