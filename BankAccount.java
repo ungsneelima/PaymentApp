@@ -1,38 +1,47 @@
 package pmt;
 
 public class BankAccount {
-    private long bankAcctId;
-    private String acctNumber;
-    private String ifscCode;
-    //	private String acctStatus;
-    private BankAccountStatusEnum acctStatus;
-    private String bankName;
-    private String branch;
+    private final long bankAcctId;
+    private final String acctNumber;
+    private final String ifscCode;
+    private BankAccountStatusEnum acctStatus; 
+    private final String bankName;
+    private final String branch;
+    private final User user;
 
-    private User user; 
-
-    public long getBankAcctId() {
-        return bankAcctId;
+    public BankAccount(long bankAcctId, String acctNumber, String ifscCode, BankAccountStatusEnum acctStatus, 
+                       String bankName, String branch, User user) {
+        this.bankAcctId = bankAcctId;
+        this.acctNumber = acctNumber;
+        this.ifscCode = ifscCode;
+        this.acctStatus = acctStatus;
+        this.bankName = bankName;
+        this.branch = branch;
+        this.user = user;
+    }
+    
+   public BankAccount() {
+		this.bankAcctId = 0;
+		this.acctNumber = "";
+		this.ifscCode = "";
+		this.bankName = "";
+		this.branch = "";
+		this.user = new User();
+		this.acctStatus =null;
+        
     }
 
-    public void setBankAcctId(long bankAcctId) {
-        this.bankAcctId = bankAcctId;
+    
+    public long getBankAcctId() {
+        return bankAcctId;
     }
 
     public String getAcctNumber() {
         return acctNumber;
     }
 
-    public void setAcctNumber(String acctNumber) {
-        this.acctNumber = acctNumber;
-    }
-
     public String getIfscCode() {
         return ifscCode;
-    }
-
-    public void setIfscCode(String ifscCode) {
-        this.ifscCode = ifscCode;
     }
 
     public BankAccountStatusEnum getAcctStatus() {
@@ -47,23 +56,11 @@ public class BankAccount {
         return bankName;
     }
 
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
-    }
-
     public String getBranch() {
         return branch;
     }
 
-    public void setBranch(String branch) {
-        this.branch = branch;
-    }
-
     public User getUser() {
         return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
