@@ -5,6 +5,7 @@ public class PmtApp {
 
 	public static void main(String[] args) {
 		AppData.initUsers();
+		displayMenu();
 	}
 	public static User getUser(String userName, String password)
 	{
