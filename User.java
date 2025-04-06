@@ -6,10 +6,12 @@ public class User {
 	private int user_id;
 	private String user_name;
 	private String password;
+	private String confirm_password
 	private String first_name;
 	private String last_name;
-	private String phone_num;
 	private String email;
+	private String phone_num;
+	private date dob;
 	private String address;  
 	//private UserAccount userAcct; //bi-directional relation
 	private List<BankAccount> baList; // lists for bank accounts
@@ -31,6 +33,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	public String getConfirmPassword() {
+		return confirm_password;
+	}
+	public void setConfirmPassword(String Confirmpassword) {
+		this.confirm_password = confirm_password;	
+		
 	}
 	public String getFirst_name() {
 		return first_name;
